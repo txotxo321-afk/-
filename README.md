@@ -63,7 +63,10 @@ Extended Karplus–Strong 是對基本 Karplus–Strong 的改良版本，目的
 其核心可簡化表示為：
 current = (1 - α)x0 + αx1
 next = feedback × ((1 - d)current + d × prev)
+
 其中：
+x0是buffer 目前位置的 sample
+x1是下一格 sample
 α 為插值比例，用來實作 Fractional Delay；
 d 為 damping 參數，用來模擬高頻衰減；
 feedback 為回授係數。
