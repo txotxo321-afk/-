@@ -112,6 +112,7 @@ f n = n f √(1 + B n²)
 時間複雜度為 O(SKH)，其中 H 為 harmonic 數量；雖然 H 在程式中是固定常數(7)，但每個 sample 都要額外計算多個泛音，因此常數較大。  
 空間複雜度為 O(KH)，需要為每個音保存每個 harmonic 的相位。
 實際產生sample的時間(9次取平均):152.995ms
+
 觀察:
 1.二者聽感其實差不大。
 2.FM synthesis 每個 sample 僅需計算兩個振盪器（carrier 與 modulator），運算量較低；而 Additive synthesis 需對每個音符計算多個泛音（7個 harmonics），並包含額外的頻率修正與衰減計算，因此在相同 sample 數下具有更高的計算成本，導致執行時間顯著增加。
