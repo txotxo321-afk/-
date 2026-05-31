@@ -58,7 +58,7 @@ y[n] = 0.5 × (y[n-N] + y[n-N-1])
 空間複雜度為 O(KL)，其中 L 約為 fs / f，代表每個音符所需的延遲線長度=(sample rate/freqeuncy)。
 產生一個C4_M7 tone=2.0 delay=0 bpm=120 bar=1 的音訊所需時間(九次取平均):15.866ms
 
-2. Extended Karplus–Strong Synthesis
+2.Extended Karplus–Strong Synthesis
 Extended Karplus–Strong 是對基本 Karplus–Strong 的改良版本，目的是讓聲音更接近真實吉他，並改善基本模型的一些限制。這個版本加入了 Fractional Delay、Damping，以及 Pick Position 等機制。
 其核心可簡化表示為：
 current = (1 - α)x0 + αx1
